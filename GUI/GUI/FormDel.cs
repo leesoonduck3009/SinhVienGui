@@ -37,7 +37,7 @@ namespace GUI
         
         private void DeleteSV()
         {
-            FormDelBUS.Instance.DeleteSinhVien(txtBoxID, txtBoxName, txtBoxClass, txtBoxAvg);
+            FormDelBUS.Instance.DeleteSinhVien(txtBoxSearch,txtBoxID, txtBoxName, txtBoxClass, txtBoxAvg);
         }
         private void SearchSV()
         {

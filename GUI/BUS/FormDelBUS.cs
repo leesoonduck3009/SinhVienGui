@@ -12,7 +12,7 @@ namespace GUI.BUS
 {
     internal class FormDelBUS
     {
-
+        SinhVien sinhVien;
         private static FormDelBUS instance;
         public static FormDelBUS Instance
         {
@@ -21,7 +21,7 @@ namespace GUI.BUS
         }
         public void FindSinhVien(TextBox txtIDSearch, TextBox txtID, TextBox txtName, TextBox txtClass, TextBox txtAVG)
         {
-            SinhVien sinhVien = SinhVienDAO.Instance.FindIDSinhVien(int.Parse(txtIDSearch.Text));
+            sinhVien= SinhVienDAO.Instance.FindIDSinhVien(int.Parse(txtIDSearch.Text));
             if (sinhVien == null)
             {
                 MessageBox.Show("Không có sinh viên này", "Thông báo");
@@ -31,30 +31,27 @@ namespace GUI.BUS
             txtName.Text = sinhVien.TenSV;
             txtClass.Text = sinhVien.MaLop;
             txtAVG.Text = sinhVien.DTB.ToString();
-            txtIDSearch.Text = "";
+
         }
-        public void DeleteSinhVien(TextBox txtID, TextBox txtName, TextBox txtClass, TextBox txtAVG)
+        public void DeleteSinhVien(TextBox txtIDSearch, TextBox txtID, TextBox txtName, TextBox txtClass, TextBox txtAVG)
         {
             if (txtID.Text != "")
             {
-               /* try*/
+                /* try*/
                 //{
-                    SinhVien sinhVien = new SinhVien();
-                    sinhVien.MaSV = int.Parse(txtID.Text);
-                    sinhVien.TenSV = txtName.Text;
-                    sinhVien.MaLop = txtClass.Text;
-                    sinhVien.DTB = double.Parse(txtAVG.Text);
+
                     SinhVienDAO.Instance.DeleteSinhVien(sinhVien);
-                    MessageBox.Show("Xóa sinh viên thành công", "Thông báo");
+                MessageBox.Show("Xóa sinh viên thành công", "Thông báo");
                     txtID.Text = "";
                     txtName.Text = "";
                     txtClass.Text = "";
                     txtAVG.Text = "";
-               // }
-/*                catch (Exception e)
-                {
-                    MessageBox.Show("Xóa sinh viên thất bại", "Thông báo");
-                }*/
+                    txtIDSearch.Text = "";
+                // }
+                /*                catch (Exception e)
+                                {
+                                    MessageBox.Show("Xóa sinh viên thất bại", "Thông báo");
+                                }*/
             }
         }
     }
