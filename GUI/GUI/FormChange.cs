@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using GUI.BUS;
+
 namespace GUI
 {
     public partial class FormChange : Form
@@ -37,13 +39,20 @@ namespace GUI
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-                    
+            SearchSV();
         }
 
         private void buttonChange_Click(object sender, EventArgs e)
         {
-           
+            UpdateSV();
         }
-
+        private void UpdateSV()
+        {
+            FormChangeBUS.Instance.UpdateSinhVien(txtBoxID, txtBoxName, txtBoxClass, txtBoxAvg);
+        }
+        private void SearchSV()
+        {
+            FormChangeBUS.Instance.FindSinhVien(txtBoxSearch, txtBoxID, txtBoxName, txtBoxClass, txtBoxAvg);
+        }
     }
 }

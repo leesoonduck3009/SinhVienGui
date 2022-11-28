@@ -2,6 +2,7 @@
 using GUI.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,11 @@ namespace GUI.DAO
         {
             get { if (instance == null) instance = new SinhVienDAO(); return instance; }
             private set { instance = value; }
+        }
+        public void LoadSinhVien()
+        {
+            ModuleQLSV db = new ModuleQLSV();
+             db.SinhViens.ToList();
         }
         public List<SinhVien>GetAllSinhVien()
         {
@@ -37,6 +43,23 @@ namespace GUI.DAO
         {
             ModuleQLSV db = new ModuleQLSV();
             return db.SinhViens.Where(p => p.TenSV.Contains(name)).ToList();
+        }
+        public SinhVien FindIDSinhVien(int ID)
+        {
+            ModuleQLSV db = new ModuleQLSV();
+            return db.SinhViens.Find(ID);
+        }
+        public void UpdateSinhVien(SinhVien a)
+        {
+            ModuleQLSV db = new ModuleQLSV();
+            db.SinhViens.AddOrUpdate(a);
+            db.SaveChanges();
+        }
+        public void DeleteSinhVien(SinhVien a)
+        {
+            ModuleQLSV db = new ModuleQLSV();
+            db.SinhViens.Remove(a);
+            db.SaveChanges();
         }
     }
 }

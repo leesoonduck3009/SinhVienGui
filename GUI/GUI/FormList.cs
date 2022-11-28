@@ -21,7 +21,7 @@ namespace GUI
             FindSinhVien();
             // dataGridList.AutoSize = true;
         }
-        void LoadData()
+        public void LoadData()
         {
             FormListBUS.Instance.GetList(dataGridList);
         }

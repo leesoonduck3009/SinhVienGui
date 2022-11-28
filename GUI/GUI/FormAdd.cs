@@ -24,8 +24,12 @@ namespace GUI
 
         private void bttAdd_Click(object sender, EventArgs e)
         {
+            AddSV();
+        }
+        private void AddSV()
+        {
             FormAddBUS.Instance.AddStudent(this.txtBoxID, this.txtBoxName, this.txtBoxClass, this.txtBoxAvg);
- 
+
         }
     }
 }

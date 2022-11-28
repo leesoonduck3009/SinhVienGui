@@ -91,7 +91,7 @@
             this.label3.Size = new System.Drawing.Size(125, 29);
             this.label3.TabIndex = 5;
             this.label3.Text = "Họ và tên: ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+
             // 
             // label4
             // 

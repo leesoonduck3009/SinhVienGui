@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GUI.BUS;
+using GUI.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,37 +22,17 @@ namespace GUI
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
-            
-            
-
-            foreach (Student student in students)
-            {
-                if (student.Id.ToString() == txtBoxSearch.Text)
-                {
-                    this.txtBoxID.Text = student.Id.ToString();
-                    this.txtBoxName.Text = student.Name;
-                    this.txtBoxClass.Text = student.Class;
-                    this.txtBoxAvg.Text = student.Avg.ToString();
-                    this.txtBoxSearch.Text = null;
-                    return;
-                }
-            }
-            if (txtBoxSearch.Text != null && txtBoxSearch.Text != "")
-                MessageBox.Show("Không có sinh viên trong danh sách", "Thông báo");
-
+            FindSinhVien();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void FindSinhVien()
         {
-            
+            FormSearchBUS.Instance.TimSinhVien(txtBoxSearch, txtBoxID, txtBoxName, txtBoxClass, txtBoxAvg);
         }
+
     }
 }

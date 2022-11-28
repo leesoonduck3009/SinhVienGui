@@ -53,7 +53,7 @@
             this.txtBoxAvg.ReadOnly = true;
             this.txtBoxAvg.Size = new System.Drawing.Size(298, 29);
             this.txtBoxAvg.TabIndex = 23;
-            this.txtBoxAvg.TextChanged += new System.EventHandler(this.txtBoxAvg_TextChanged);
+
             // 
             // txtBoxClass
             // 
@@ -64,7 +64,7 @@
             this.txtBoxClass.ReadOnly = true;
             this.txtBoxClass.Size = new System.Drawing.Size(298, 29);
             this.txtBoxClass.TabIndex = 22;
-            this.txtBoxClass.TextChanged += new System.EventHandler(this.txtBoxClass_TextChanged);
+
             // 
             // txtBoxName
             // 
@@ -75,7 +75,7 @@
             this.txtBoxName.ReadOnly = true;
             this.txtBoxName.Size = new System.Drawing.Size(298, 29);
             this.txtBoxName.TabIndex = 21;
-            this.txtBoxName.TextChanged += new System.EventHandler(this.txtBoxName_TextChanged);
+  
             // 
             // txtBoxID
             // 
@@ -86,7 +86,7 @@
             this.txtBoxID.ReadOnly = true;
             this.txtBoxID.Size = new System.Drawing.Size(298, 29);
             this.txtBoxID.TabIndex = 20;
-            this.txtBoxID.TextChanged += new System.EventHandler(this.txtBoxID_TextChanged);
+
             // 
             // label5
             // 
@@ -107,7 +107,7 @@
             this.label4.Size = new System.Drawing.Size(194, 29);
             this.label4.TabIndex = 18;
             this.label4.Text = "Điểm trung bình: ";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+
             // 
             // label3
             // 
@@ -118,7 +118,7 @@
             this.label3.Size = new System.Drawing.Size(125, 29);
             this.label3.TabIndex = 17;
             this.label3.Text = "Họ và tên: ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+
             // 
             // pictureBox1
             // 
@@ -149,7 +149,7 @@
             this.label2.Size = new System.Drawing.Size(92, 29);
             this.label2.TabIndex = 13;
             this.label2.Text = "MSSV: ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+
             // 
             // label1
             // 
@@ -160,7 +160,7 @@
             this.label1.Size = new System.Drawing.Size(66, 29);
             this.label1.TabIndex = 14;
             this.label1.Text = "Lớp: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+
             // 
             // lbList
             // 

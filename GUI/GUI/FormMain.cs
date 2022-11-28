@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI.DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using GUI.DAO;
 namespace GUI
 {
     public partial class FormMain : Form
@@ -16,9 +17,14 @@ namespace GUI
         public FormMain()
         {
             InitializeComponent();
+            LoadDB();
         }
 
-
+        void LoadDB()
+        {
+            ModuleQLSV db = new ModuleQLSV();
+            SinhVienDAO.Instance.LoadSinhVien();
+        }
         private void ActivateButton(object senderBtn)
         {
             if (senderBtn != null)
@@ -84,6 +90,11 @@ namespace GUI
             DisableButton();
             ActivateButton(sender);
             OpenChildFrom(new FormChange());
+        }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
    
