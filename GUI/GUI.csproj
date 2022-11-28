@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,61 +55,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAdd.cs">
+    <Compile Include="BUS\FormAddBUS.cs" />
+    <Compile Include="BUS\FormChangeBUS.cs" />
+    <Compile Include="BUS\FormDelBUS.cs" />
+    <Compile Include="BUS\FormListBUS.cs" />
+    <Compile Include="BUS\FormSearchBUS.cs" />
+    <Compile Include="DAO\LopDAO.cs" />
+    <Compile Include="DAO\SinhVienDAO.cs" />
+    <Compile Include="DTO\Lop.cs" />
+    <Compile Include="DTO\ModuleQLSV.cs" />
+    <Compile Include="DTO\SinhVien.cs" />
+    <Compile Include="GUI\FormAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAdd.Designer.cs">
+    <Compile Include="GUI\FormAdd.Designer.cs">
       <DependentUpon>FormAdd.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormChange.cs">
+    <Compile Include="GUI\FormChange.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormChange.Designer.cs">
+    <Compile Include="GUI\FormChange.Designer.cs">
       <DependentUpon>FormChange.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormDel.cs">
+    <Compile Include="GUI\FormDel.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormDel.Designer.cs">
+    <Compile Include="GUI\FormDel.Designer.cs">
       <DependentUpon>FormDel.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormList.cs">
+    <Compile Include="GUI\FormList.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormList.Designer.cs">
+    <Compile Include="GUI\FormList.Designer.cs">
       <DependentUpon>FormList.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMain.cs">
+    <Compile Include="GUI\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
+    <Compile Include="GUI\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormSearch.cs">
+    <Compile Include="GUI\FormSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormSearch.Designer.cs">
+    <Compile Include="GUI\FormSearch.Designer.cs">
       <DependentUpon>FormSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Student.cs" />
-    <EmbeddedResource Include="FormAdd.resx">
+    <EmbeddedResource Include="GUI\FormAdd.resx">
       <DependentUpon>FormAdd.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormChange.resx">
+    <EmbeddedResource Include="GUI\FormChange.resx">
       <DependentUpon>FormChange.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormDel.resx">
+    <EmbeddedResource Include="GUI\FormDel.resx">
       <DependentUpon>FormDel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormList.resx">
+    <EmbeddedResource Include="GUI\FormList.resx">
       <DependentUpon>FormList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
+    <EmbeddedResource Include="GUI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormSearch.resx">
+    <EmbeddedResource Include="GUI\FormSearch.resx">
       <DependentUpon>FormSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -113,6 +132,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -141,5 +161,6 @@
   <ItemGroup>
     <None Include="Resources\kisspng-computer-icons-image-editing-font-awesome-video-ed-register-icon-5b287b22c25a96.2897836015293796187961.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

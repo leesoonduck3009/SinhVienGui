@@ -1,0 +1,34 @@
+﻿CREATE DATABASE QLSV
+GO 
+USE QLSV
+GO
+
+CREATE TABLE Lop
+(
+	MaLop NVARCHAR(10) PRIMARY KEY,
+	TenLop NVARCHAR(100)
+)
+
+CREATE TABLE SinhVien
+(
+	MaSV INT  PRIMARY KEY,
+	TenSV NVARCHAR(100),
+	MaLop NVARCHAR(10),
+	DTB FLOAT,
+	CONSTRAINT FK_MaLop FOREIGN KEY(MaLop) REFERENCES Lop(MaLop)
+)
+
+-- LOP
+INSERT INTO Lop VALUES ('PMCL.1',N'Phần mềm chất lượng .1')
+INSERT INTO Lop VALUES ('PMCL.2',N'Phần mềm chất lượng .2')
+
+-- SinhVien
+INSERT INTO SinhVien VALUES ('21520638', N'Nguyễn Phúc Bình', 'PMCL.1', '9.27')
+INSERT INTO SinhVien VALUES ('21520455', N'Phan Tuấn Thành', 'PMCL.1', '9.28')
+INSERT INTO SinhVien VALUES ('21520519', N'Lê Thanh Tuấn', 'PMCL.1', '9.27')
+ 
+ SELECT * FROM SinhVien
+
+
+USE master 
+DROP DATABASE  QLSV

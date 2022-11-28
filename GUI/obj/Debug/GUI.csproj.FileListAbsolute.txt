@@ -29,3 +29,8 @@ C:\Data\Lập trình\GUI\GUI\obj\Debug\GUI.FormSearch.resources
 C:\Data\Lập trình\GUI\GUI\obj\Debug\GUI.FormDel.resources
 C:\Data\Lập trình\GUI\GUI\obj\Debug\GUI.FormAdd.resources
 C:\Data\Lập trình\GUI\GUI\obj\Debug\GUI.FormChange.resources
+C:\Data\Lập trình\GUI\GUI\bin\Debug\EntityFramework.dll
+C:\Data\Lập trình\GUI\GUI\bin\Debug\EntityFramework.SqlServer.dll
+C:\Data\Lập trình\GUI\GUI\bin\Debug\EntityFramework.xml
+C:\Data\Lập trình\GUI\GUI\bin\Debug\EntityFramework.SqlServer.xml
+C:\Data\Lập trình\GUI\GUI\obj\Debug\GUI.csproj.CopyComplete
